@@ -1,0 +1,925 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD091F032156FE4200121E80 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD091F022156FE4100121E80 /* Accelerate.framework */; };
+		CD091F052156FE4D00121E80 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD091F042156FE4D00121E80 /* QuartzCore.framework */; };
+		CD1D19252154C10C000CB578 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D19242154C10C000CB578 /* AppDelegate.m */; };
+		CD1D19282154C10C000CB578 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D19272154C10C000CB578 /* ViewController.m */; };
+		CD1D192B2154C10C000CB578 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D192A2154C10C000CB578 /* Document.m */; };
+		CD1D192D2154C10E000CB578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1D192C2154C10E000CB578 /* Assets.xcassets */; };
+		CD1D19302154C10E000CB578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1D192E2154C10E000CB578 /* Main.storyboard */; };
+		CD1D19332154C10E000CB578 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D19322154C10E000CB578 /* main.m */; };
+		CD1D193E2154C10E000CB578 /* TrevizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D193D2154C10E000CB578 /* TrevizTests.m */; };
+		CD1D19492154C10E000CB578 /* TrevizUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D19482154C10E000CB578 /* TrevizUITests.m */; };
+		CD3C3DB721745F5D00D2BFBF /* AnalysisInputs.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD3C3DB421745F5C00D2BFBF /* AnalysisInputs.plist */; };
+		CD3C3DB821745F5D00D2BFBF /* AnalysisInput.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3C3DB621745F5D00D2BFBF /* AnalysisInput.m */; };
+		CD3C3DC821746ACD00D2BFBF /* icon_play.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3C3DBA21746ACC00D2BFBF /* icon_play.png */; };
+		CD978EBD2157026C00F9442C /* Aerodynamics.m in Sources */ = {isa = PBXBuildFile; fileRef = CD978EB32157026A00F9442C /* Aerodynamics.m */; };
+		CD978EBE2157026C00F9442C /* Plotting.m in Sources */ = {isa = PBXBuildFile; fileRef = CD978EB42157026A00F9442C /* Plotting.m */; };
+		CD978EBF2157026C00F9442C /* Environment.m in Sources */ = {isa = PBXBuildFile; fileRef = CD978EB62157026B00F9442C /* Environment.m */; };
+		CD978EC02157026C00F9442C /* Physics.m in Sources */ = {isa = PBXBuildFile; fileRef = CD978EB82157026B00F9442C /* Physics.m */; };
+		CD978EC12157026C00F9442C /* Trajectory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD978EB92157026B00F9442C /* Trajectory.m */; };
+		CD978EC22157026C00F9442C /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = CD978EBB2157026C00F9442C /* Vehicle.m */; };
+		CD978EC32157026C00F9442C /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = CD978EBC2157026C00F9442C /* State.m */; };
+		CDC3C7A4215B580800785C4B /* disper_fpa.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C795215B580700785C4B /* disper_fpa.png */; };
+		CDC3C7A5215B580800785C4B /* Digital Universe (4).JPG in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7A3215B580800785C4B /* Digital Universe (4).JPG */; };
+		CDC3C7C0215B593600785C4B /* parachute_deploy_box.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7A7215B593200785C4B /* parachute_deploy_box.png */; };
+		CDC3C7C1215B593600785C4B /* vgspace_q.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7A8215B593300785C4B /* vgspace_q.pdf */; };
+		CDC3C7C2215B593600785C4B /* hist_beta.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7A9215B593300785C4B /* hist_beta.pdf */; };
+		CDC3C7C3215B593600785C4B /* ex_opt_param.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7AA215B593300785C4B /* ex_opt_param.pdf */; };
+		CDC3C7C4215B593600785C4B /* ex_traj.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7AB215B593300785C4B /* ex_traj.pdf */; };
+		CDC3C7C5215B593600785C4B /* Atmosphere_deviation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7AC215B593300785C4B /* Atmosphere_deviation.pdf */; };
+		CDC3C7C6215B593600785C4B /* lambdacomparison.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7AD215B593300785C4B /* lambdacomparison.pdf */; };
+		CDC3C7C7215B593600785C4B /* parachute_deploy_box.bmp in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7AE215B593300785C4B /* parachute_deploy_box.bmp */; };
+		CDC3C7C8215B593600785C4B /* timeflip_montecarlo.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7AF215B593300785C4B /* timeflip_montecarlo.png */; };
+		CDC3C7C9215B593600785C4B /* vflip_montecarlo.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7B0215B593300785C4B /* vflip_montecarlo.png */; };
+		CDC3C7CA215B593600785C4B /* lambda_montecarlo.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7B1215B593400785C4B /* lambda_montecarlo.png */; };
+		CDC3C7CB215B593600785C4B /* eqglide_test.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7B2215B593400785C4B /* eqglide_test.pdf */; };
+		CDC3C7CC215B593600785C4B /* ex_traj_msl.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7B3215B593400785C4B /* ex_traj_msl.pdf */; };
+		CDC3C7CD215B593600785C4B /* vgspace_2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7B4215B593400785C4B /* vgspace_2.pdf */; };
+		CDC3C7CE215B593600785C4B /* eqglide_test_performance.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7B5215B593400785C4B /* eqglide_test_performance.pdf */; };
+		CDC3C7CF215B593600785C4B /* V_G_contour_landing.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7B6215B593400785C4B /* V_G_contour_landing.pdf */; };
+		CDC3C7D0215B593600785C4B /* flip_compare.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7B7215B593400785C4B /* flip_compare.pdf */; };
+		CDC3C7D1215B593600785C4B /* qflip_montecarlo.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7B8215B593500785C4B /* qflip_montecarlo.png */; };
+		CDC3C7D2215B593600785C4B /* opt_switch_conditions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7B9215B593500785C4B /* opt_switch_conditions.pdf */; };
+		CDC3C7D3215B593600785C4B /* altcontour_glim.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7BA215B593500785C4B /* altcontour_glim.pdf */; };
+		CDC3C7D4215B593600785C4B /* vgspace_1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7BB215B593500785C4B /* vgspace_1.pdf */; };
+		CDC3C7D5215B593600785C4B /* ex_opt_traj.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7BC215B593500785C4B /* ex_opt_traj.pdf */; };
+		CDC3C7D6215B593600785C4B /* maxqtest.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7BD215B593600785C4B /* maxqtest.pdf */; };
+		CDC3C7D7215B593600785C4B /* switchtime_contour.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7BE215B593600785C4B /* switchtime_contour.pdf */; };
+		CDC3C7D8215B593600785C4B /* beta_ex.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7BF215B593600785C4B /* beta_ex.pdf */; };
+		CDC3C7E1215DE09400785C4B /* analysisInputsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC3C7DF215DE09400785C4B /* analysisInputsViewController.m */; };
+		CDC3C7E2215DE09400785C4B /* analysisInputsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7E0215DE09400785C4B /* analysisInputsViewController.xib */; };
+		CDC3C7EA215E019700785C4B /* Plots_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7E8215E019600785C4B /* Plots_icon.png */; };
+		CDC3C7EB215E019700785C4B /* trajectories_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC3C7E9215E019700785C4B /* trajectories_icon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD091F162156FE7100121E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD091F062156FE7100121E80 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = "CorePlot Mac";
+		};
+		CD091F182156FE7100121E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD091F062156FE7100121E80 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0730F600109492D800E95162;
+			remoteInfo = "UnitTests Mac";
+		};
+		CD091F1A2156FE7100121E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD091F062156FE7100121E80 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09781A46185200D45436;
+			remoteInfo = "CorePlot iOS";
+		};
+		CD091F1C2156FE7100121E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD091F062156FE7100121E80 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09821A46185300D45436;
+			remoteInfo = "UnitTests iOS";
+		};
+		CD091F1E2156FE7100121E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD091F062156FE7100121E80 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09BA1A4619A900D45436;
+			remoteInfo = "CorePlot-CocoaTouch";
+		};
+		CD091F202156FE7100121E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD091F062156FE7100121E80 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09C41A4619A900D45436;
+			remoteInfo = "CorePlot-CocoaTouchTests";
+		};
+		CD091F222156FE7100121E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD091F062156FE7100121E80 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C37EA6921BC83F2A0091C8F7;
+			remoteInfo = "CorePlot tvOS";
+		};
+		CD091F242156FE7100121E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD091F062156FE7100121E80 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C37EA6B71BC83F2D0091C8F7;
+			remoteInfo = "UnitTests tvOS";
+		};
+		CD1D193A2154C10E000CB578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD1D19182154C10C000CB578 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD1D191F2154C10C000CB578;
+			remoteInfo = Treviz;
+		};
+		CD1D19452154C10E000CB578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD1D19182154C10C000CB578 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD1D191F2154C10C000CB578;
+			remoteInfo = Treviz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD091F022156FE4100121E80 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		CD091F042156FE4D00121E80 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CD091F062156FE7100121E80 /* CorePlot.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CorePlot.xcodeproj; path = "../../CorePlot/core-plot/framework/CorePlot.xcodeproj"; sourceTree = "<group>"; };
+		CD1D19202154C10C000CB578 /* Treviz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Treviz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1D19232154C10C000CB578 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD1D19242154C10C000CB578 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD1D19262154C10C000CB578 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CD1D19272154C10C000CB578 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CD1D19292154C10C000CB578 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		CD1D192A2154C10C000CB578 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		CD1D192C2154C10E000CB578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD1D192F2154C10E000CB578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD1D19312154C10E000CB578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD1D19322154C10E000CB578 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD1D19342154C10E000CB578 /* Treviz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Treviz.entitlements; sourceTree = "<group>"; };
+		CD1D19392154C10E000CB578 /* TrevizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrevizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1D193D2154C10E000CB578 /* TrevizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrevizTests.m; sourceTree = "<group>"; };
+		CD1D193F2154C10E000CB578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD1D19442154C10E000CB578 /* TrevizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrevizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1D19482154C10E000CB578 /* TrevizUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrevizUITests.m; sourceTree = "<group>"; };
+		CD1D194A2154C10E000CB578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD3C3DB421745F5C00D2BFBF /* AnalysisInputs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AnalysisInputs.plist; sourceTree = "<group>"; };
+		CD3C3DB521745F5D00D2BFBF /* AnalysisInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalysisInput.h; sourceTree = "<group>"; };
+		CD3C3DB621745F5D00D2BFBF /* AnalysisInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalysisInput.m; sourceTree = "<group>"; };
+		CD3C3DBA21746ACC00D2BFBF /* icon_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_play.png; path = Images/icon_play.png; sourceTree = "<group>"; };
+		CD978EA22157026900F9442C /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		CD978EB02157026900F9442C /* Aerodynamics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aerodynamics.h; sourceTree = "<group>"; };
+		CD978EB12157026A00F9442C /* Physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Physics.h; sourceTree = "<group>"; };
+		CD978EB22157026A00F9442C /* Trajectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trajectory.h; sourceTree = "<group>"; };
+		CD978EB32157026A00F9442C /* Aerodynamics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aerodynamics.m; sourceTree = "<group>"; };
+		CD978EB42157026A00F9442C /* Plotting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plotting.m; sourceTree = "<group>"; };
+		CD978EB52157026B00F9442C /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
+		CD978EB62157026B00F9442C /* Environment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Environment.m; sourceTree = "<group>"; };
+		CD978EB72157026B00F9442C /* Plotting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plotting.h; sourceTree = "<group>"; };
+		CD978EB82157026B00F9442C /* Physics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Physics.m; sourceTree = "<group>"; };
+		CD978EB92157026B00F9442C /* Trajectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trajectory.m; sourceTree = "<group>"; };
+		CD978EBA2157026B00F9442C /* Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Environment.h; sourceTree = "<group>"; };
+		CD978EBB2157026C00F9442C /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
+		CD978EBC2157026C00F9442C /* State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = State.m; sourceTree = "<group>"; };
+		CDC3C795215B580700785C4B /* disper_fpa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disper_fpa.png; sourceTree = "<group>"; };
+		CDC3C7A3215B580800785C4B /* Digital Universe (4).JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Digital Universe (4).JPG"; sourceTree = "<group>"; };
+		CDC3C7A7215B593200785C4B /* parachute_deploy_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parachute_deploy_box.png; sourceTree = "<group>"; };
+		CDC3C7A8215B593300785C4B /* vgspace_q.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = vgspace_q.pdf; sourceTree = "<group>"; };
+		CDC3C7A9215B593300785C4B /* hist_beta.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hist_beta.pdf; sourceTree = "<group>"; };
+		CDC3C7AA215B593300785C4B /* ex_opt_param.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ex_opt_param.pdf; sourceTree = "<group>"; };
+		CDC3C7AB215B593300785C4B /* ex_traj.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ex_traj.pdf; sourceTree = "<group>"; };
+		CDC3C7AC215B593300785C4B /* Atmosphere_deviation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Atmosphere_deviation.pdf; sourceTree = "<group>"; };
+		CDC3C7AD215B593300785C4B /* lambdacomparison.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = lambdacomparison.pdf; sourceTree = "<group>"; };
+		CDC3C7AE215B593300785C4B /* parachute_deploy_box.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = parachute_deploy_box.bmp; sourceTree = "<group>"; };
+		CDC3C7AF215B593300785C4B /* timeflip_montecarlo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeflip_montecarlo.png; sourceTree = "<group>"; };
+		CDC3C7B0215B593300785C4B /* vflip_montecarlo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vflip_montecarlo.png; sourceTree = "<group>"; };
+		CDC3C7B1215B593400785C4B /* lambda_montecarlo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lambda_montecarlo.png; sourceTree = "<group>"; };
+		CDC3C7B2215B593400785C4B /* eqglide_test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = eqglide_test.pdf; sourceTree = "<group>"; };
+		CDC3C7B3215B593400785C4B /* ex_traj_msl.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ex_traj_msl.pdf; sourceTree = "<group>"; };
+		CDC3C7B4215B593400785C4B /* vgspace_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = vgspace_2.pdf; sourceTree = "<group>"; };
+		CDC3C7B5215B593400785C4B /* eqglide_test_performance.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = eqglide_test_performance.pdf; sourceTree = "<group>"; };
+		CDC3C7B6215B593400785C4B /* V_G_contour_landing.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = V_G_contour_landing.pdf; sourceTree = "<group>"; };
+		CDC3C7B7215B593400785C4B /* flip_compare.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = flip_compare.pdf; sourceTree = "<group>"; };
+		CDC3C7B8215B593500785C4B /* qflip_montecarlo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qflip_montecarlo.png; sourceTree = "<group>"; };
+		CDC3C7B9215B593500785C4B /* opt_switch_conditions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = opt_switch_conditions.pdf; sourceTree = "<group>"; };
+		CDC3C7BA215B593500785C4B /* altcontour_glim.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = altcontour_glim.pdf; sourceTree = "<group>"; };
+		CDC3C7BB215B593500785C4B /* vgspace_1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = vgspace_1.pdf; sourceTree = "<group>"; };
+		CDC3C7BC215B593500785C4B /* ex_opt_traj.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ex_opt_traj.pdf; sourceTree = "<group>"; };
+		CDC3C7BD215B593600785C4B /* maxqtest.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = maxqtest.pdf; sourceTree = "<group>"; };
+		CDC3C7BE215B593600785C4B /* switchtime_contour.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = switchtime_contour.pdf; sourceTree = "<group>"; };
+		CDC3C7BF215B593600785C4B /* beta_ex.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = beta_ex.pdf; sourceTree = "<group>"; };
+		CDC3C7DE215DE09400785C4B /* analysisInputsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = analysisInputsViewController.h; sourceTree = "<group>"; };
+		CDC3C7DF215DE09400785C4B /* analysisInputsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = analysisInputsViewController.m; sourceTree = "<group>"; };
+		CDC3C7E0215DE09400785C4B /* analysisInputsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = analysisInputsViewController.xib; sourceTree = "<group>"; };
+		CDC3C7E8215E019600785C4B /* Plots_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plots_icon.png; sourceTree = "<group>"; };
+		CDC3C7E9215E019700785C4B /* trajectories_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trajectories_icon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD1D191D2154C10C000CB578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD091F052156FE4D00121E80 /* QuartzCore.framework in Frameworks */,
+				CD091F032156FE4200121E80 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D19362154C10E000CB578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D19412154C10E000CB578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD091F012156FE4100121E80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD091F062156FE7100121E80 /* CorePlot.xcodeproj */,
+				CD091F042156FE4D00121E80 /* QuartzCore.framework */,
+				CD091F022156FE4100121E80 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD091F072156FE7100121E80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD091F172156FE7100121E80 /* CorePlot.framework */,
+				CD091F192156FE7100121E80 /* UnitTests.xctest */,
+				CD091F1B2156FE7100121E80 /* CorePlot.framework */,
+				CD091F1D2156FE7100121E80 /* UnitTests iOS.xctest */,
+				CD091F1F2156FE7100121E80 /* libCorePlot-CocoaTouch.a */,
+				CD091F212156FE7100121E80 /* CorePlot-CocoaTouchTests.xctest */,
+				CD091F232156FE7100121E80 /* CorePlot.framework */,
+				CD091F252156FE7100121E80 /* UnitTests tvOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD1D19172154C10C000CB578 = {
+			isa = PBXGroup;
+			children = (
+				CD1D19222154C10C000CB578 /* Treviz */,
+				CD1D193C2154C10E000CB578 /* TrevizTests */,
+				CD1D19472154C10E000CB578 /* TrevizUITests */,
+				CD1D19212154C10C000CB578 /* Products */,
+				CD091F012156FE4100121E80 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD1D19212154C10C000CB578 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD1D19202154C10C000CB578 /* Treviz.app */,
+				CD1D19392154C10E000CB578 /* TrevizTests.xctest */,
+				CD1D19442154C10E000CB578 /* TrevizUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD1D19222154C10C000CB578 /* Treviz */ = {
+			isa = PBXGroup;
+			children = (
+				CDC3C7E7215DF6A800785C4B /* Analysis Inputs */,
+				CD978EB02157026900F9442C /* Aerodynamics.h */,
+				CD978EB32157026A00F9442C /* Aerodynamics.m */,
+				CD978EBA2157026B00F9442C /* Environment.h */,
+				CD978EB62157026B00F9442C /* Environment.m */,
+				CD978EB12157026A00F9442C /* Physics.h */,
+				CD978EB82157026B00F9442C /* Physics.m */,
+				CD978EB72157026B00F9442C /* Plotting.h */,
+				CD978EB42157026A00F9442C /* Plotting.m */,
+				CD978EA22157026900F9442C /* State.h */,
+				CD978EBC2157026C00F9442C /* State.m */,
+				CD978EB22157026A00F9442C /* Trajectory.h */,
+				CD978EB92157026B00F9442C /* Trajectory.m */,
+				CD978EB52157026B00F9442C /* Vehicle.h */,
+				CD978EBB2157026C00F9442C /* Vehicle.m */,
+				CD1D19232154C10C000CB578 /* AppDelegate.h */,
+				CD1D19242154C10C000CB578 /* AppDelegate.m */,
+				CD1D19262154C10C000CB578 /* ViewController.h */,
+				CD1D19272154C10C000CB578 /* ViewController.m */,
+				CD1D19292154C10C000CB578 /* Document.h */,
+				CD1D192A2154C10C000CB578 /* Document.m */,
+				CD1D192C2154C10E000CB578 /* Assets.xcassets */,
+				CDC3C7A6215B581F00785C4B /* Images */,
+				CD1D192E2154C10E000CB578 /* Main.storyboard */,
+				CD3C3DBA21746ACC00D2BFBF /* icon_play.png */,
+				CD1D19312154C10E000CB578 /* Info.plist */,
+				CD1D19322154C10E000CB578 /* main.m */,
+				CD1D19342154C10E000CB578 /* Treviz.entitlements */,
+			);
+			path = Treviz;
+			sourceTree = "<group>";
+		};
+		CD1D193C2154C10E000CB578 /* TrevizTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD1D193D2154C10E000CB578 /* TrevizTests.m */,
+				CD1D193F2154C10E000CB578 /* Info.plist */,
+			);
+			path = TrevizTests;
+			sourceTree = "<group>";
+		};
+		CD1D19472154C10E000CB578 /* TrevizUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD1D19482154C10E000CB578 /* TrevizUITests.m */,
+				CD1D194A2154C10E000CB578 /* Info.plist */,
+			);
+			path = TrevizUITests;
+			sourceTree = "<group>";
+		};
+		CDC3C7A6215B581F00785C4B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CDC3C7BA215B593500785C4B /* altcontour_glim.pdf */,
+				CDC3C7AC215B593300785C4B /* Atmosphere_deviation.pdf */,
+				CDC3C7BF215B593600785C4B /* beta_ex.pdf */,
+				CDC3C7B5215B593400785C4B /* eqglide_test_performance.pdf */,
+				CDC3C7B2215B593400785C4B /* eqglide_test.pdf */,
+				CDC3C7AA215B593300785C4B /* ex_opt_param.pdf */,
+				CDC3C7BC215B593500785C4B /* ex_opt_traj.pdf */,
+				CDC3C7B3215B593400785C4B /* ex_traj_msl.pdf */,
+				CDC3C7AB215B593300785C4B /* ex_traj.pdf */,
+				CDC3C7B7215B593400785C4B /* flip_compare.pdf */,
+				CDC3C7A9215B593300785C4B /* hist_beta.pdf */,
+				CDC3C7B1215B593400785C4B /* lambda_montecarlo.png */,
+				CDC3C7AD215B593300785C4B /* lambdacomparison.pdf */,
+				CDC3C7BD215B593600785C4B /* maxqtest.pdf */,
+				CDC3C7B9215B593500785C4B /* opt_switch_conditions.pdf */,
+				CDC3C7AE215B593300785C4B /* parachute_deploy_box.bmp */,
+				CDC3C7A7215B593200785C4B /* parachute_deploy_box.png */,
+				CDC3C7E8215E019600785C4B /* Plots_icon.png */,
+				CDC3C7E9215E019700785C4B /* trajectories_icon.png */,
+				CDC3C7B8215B593500785C4B /* qflip_montecarlo.png */,
+				CDC3C7BE215B593600785C4B /* switchtime_contour.pdf */,
+				CDC3C7AF215B593300785C4B /* timeflip_montecarlo.png */,
+				CDC3C7B6215B593400785C4B /* V_G_contour_landing.pdf */,
+				CDC3C7B0215B593300785C4B /* vflip_montecarlo.png */,
+				CDC3C7BB215B593500785C4B /* vgspace_1.pdf */,
+				CDC3C7B4215B593400785C4B /* vgspace_2.pdf */,
+				CDC3C7A8215B593300785C4B /* vgspace_q.pdf */,
+				CDC3C7A3215B580800785C4B /* Digital Universe (4).JPG */,
+				CDC3C795215B580700785C4B /* disper_fpa.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		CDC3C7E7215DF6A800785C4B /* Analysis Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				CD3C3DB521745F5D00D2BFBF /* AnalysisInput.h */,
+				CD3C3DB621745F5D00D2BFBF /* AnalysisInput.m */,
+				CD3C3DB421745F5C00D2BFBF /* AnalysisInputs.plist */,
+				CDC3C7DE215DE09400785C4B /* analysisInputsViewController.h */,
+				CDC3C7DF215DE09400785C4B /* analysisInputsViewController.m */,
+				CDC3C7E0215DE09400785C4B /* analysisInputsViewController.xib */,
+			);
+			path = "Analysis Inputs";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD1D191F2154C10C000CB578 /* Treviz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD1D194D2154C10E000CB578 /* Build configuration list for PBXNativeTarget "Treviz" */;
+			buildPhases = (
+				CD1D191C2154C10C000CB578 /* Sources */,
+				CD1D191D2154C10C000CB578 /* Frameworks */,
+				CD1D191E2154C10C000CB578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Treviz;
+			productName = Treviz;
+			productReference = CD1D19202154C10C000CB578 /* Treviz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD1D19382154C10E000CB578 /* TrevizTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD1D19502154C10E000CB578 /* Build configuration list for PBXNativeTarget "TrevizTests" */;
+			buildPhases = (
+				CD1D19352154C10E000CB578 /* Sources */,
+				CD1D19362154C10E000CB578 /* Frameworks */,
+				CD1D19372154C10E000CB578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD1D193B2154C10E000CB578 /* PBXTargetDependency */,
+			);
+			name = TrevizTests;
+			productName = TrevizTests;
+			productReference = CD1D19392154C10E000CB578 /* TrevizTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD1D19432154C10E000CB578 /* TrevizUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD1D19532154C10E000CB578 /* Build configuration list for PBXNativeTarget "TrevizUITests" */;
+			buildPhases = (
+				CD1D19402154C10E000CB578 /* Sources */,
+				CD1D19412154C10E000CB578 /* Frameworks */,
+				CD1D19422154C10E000CB578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD1D19462154C10E000CB578 /* PBXTargetDependency */,
+			);
+			name = TrevizUITests;
+			productName = TrevizUITests;
+			productReference = CD1D19442154C10E000CB578 /* TrevizUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD1D19182154C10C000CB578 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Tyler Anderson";
+				TargetAttributes = {
+					CD1D191F2154C10C000CB578 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					CD1D19382154C10E000CB578 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = CD1D191F2154C10C000CB578;
+					};
+					CD1D19432154C10E000CB578 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = CD1D191F2154C10C000CB578;
+					};
+				};
+			};
+			buildConfigurationList = CD1D191B2154C10C000CB578 /* Build configuration list for PBXProject "Treviz" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD1D19172154C10C000CB578;
+			productRefGroup = CD1D19212154C10C000CB578 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CD091F072156FE7100121E80 /* Products */;
+					ProjectRef = CD091F062156FE7100121E80 /* CorePlot.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				CD1D191F2154C10C000CB578 /* Treviz */,
+				CD1D19382154C10E000CB578 /* TrevizTests */,
+				CD1D19432154C10E000CB578 /* TrevizUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CD091F172156FE7100121E80 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = CD091F162156FE7100121E80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD091F192156FE7100121E80 /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = CD091F182156FE7100121E80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD091F1B2156FE7100121E80 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = CD091F1A2156FE7100121E80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD091F1D2156FE7100121E80 /* UnitTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UnitTests iOS.xctest";
+			remoteRef = CD091F1C2156FE7100121E80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD091F1F2156FE7100121E80 /* libCorePlot-CocoaTouch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCorePlot-CocoaTouch.a";
+			remoteRef = CD091F1E2156FE7100121E80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD091F212156FE7100121E80 /* CorePlot-CocoaTouchTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CorePlot-CocoaTouchTests.xctest";
+			remoteRef = CD091F202156FE7100121E80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD091F232156FE7100121E80 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = CD091F222156FE7100121E80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD091F252156FE7100121E80 /* UnitTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UnitTests tvOS.xctest";
+			remoteRef = CD091F242156FE7100121E80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD1D191E2154C10C000CB578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC3C7D7215B593600785C4B /* switchtime_contour.pdf in Resources */,
+				CDC3C7D1215B593600785C4B /* qflip_montecarlo.png in Resources */,
+				CDC3C7D2215B593600785C4B /* opt_switch_conditions.pdf in Resources */,
+				CDC3C7CF215B593600785C4B /* V_G_contour_landing.pdf in Resources */,
+				CD1D192D2154C10E000CB578 /* Assets.xcassets in Resources */,
+				CDC3C7CA215B593600785C4B /* lambda_montecarlo.png in Resources */,
+				CDC3C7CB215B593600785C4B /* eqglide_test.pdf in Resources */,
+				CDC3C7A4215B580800785C4B /* disper_fpa.png in Resources */,
+				CDC3C7CC215B593600785C4B /* ex_traj_msl.pdf in Resources */,
+				CD3C3DB721745F5D00D2BFBF /* AnalysisInputs.plist in Resources */,
+				CDC3C7C5215B593600785C4B /* Atmosphere_deviation.pdf in Resources */,
+				CDC3C7D6215B593600785C4B /* maxqtest.pdf in Resources */,
+				CDC3C7C2215B593600785C4B /* hist_beta.pdf in Resources */,
+				CDC3C7EA215E019700785C4B /* Plots_icon.png in Resources */,
+				CD1D19302154C10E000CB578 /* Main.storyboard in Resources */,
+				CDC3C7C0215B593600785C4B /* parachute_deploy_box.png in Resources */,
+				CDC3C7D5215B593600785C4B /* ex_opt_traj.pdf in Resources */,
+				CDC3C7C4215B593600785C4B /* ex_traj.pdf in Resources */,
+				CD3C3DC821746ACD00D2BFBF /* icon_play.png in Resources */,
+				CDC3C7C8215B593600785C4B /* timeflip_montecarlo.png in Resources */,
+				CDC3C7C6215B593600785C4B /* lambdacomparison.pdf in Resources */,
+				CDC3C7D4215B593600785C4B /* vgspace_1.pdf in Resources */,
+				CDC3C7D0215B593600785C4B /* flip_compare.pdf in Resources */,
+				CDC3C7E2215DE09400785C4B /* analysisInputsViewController.xib in Resources */,
+				CDC3C7C1215B593600785C4B /* vgspace_q.pdf in Resources */,
+				CDC3C7CD215B593600785C4B /* vgspace_2.pdf in Resources */,
+				CDC3C7A5215B580800785C4B /* Digital Universe (4).JPG in Resources */,
+				CDC3C7C9215B593600785C4B /* vflip_montecarlo.png in Resources */,
+				CDC3C7C7215B593600785C4B /* parachute_deploy_box.bmp in Resources */,
+				CDC3C7CE215B593600785C4B /* eqglide_test_performance.pdf in Resources */,
+				CDC3C7D3215B593600785C4B /* altcontour_glim.pdf in Resources */,
+				CDC3C7C3215B593600785C4B /* ex_opt_param.pdf in Resources */,
+				CDC3C7D8215B593600785C4B /* beta_ex.pdf in Resources */,
+				CDC3C7EB215E019700785C4B /* trajectories_icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D19372154C10E000CB578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D19422154C10E000CB578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD1D191C2154C10C000CB578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD978EC12157026C00F9442C /* Trajectory.m in Sources */,
+				CD978EBF2157026C00F9442C /* Environment.m in Sources */,
+				CD1D192B2154C10C000CB578 /* Document.m in Sources */,
+				CD978EC32157026C00F9442C /* State.m in Sources */,
+				CD1D19282154C10C000CB578 /* ViewController.m in Sources */,
+				CD978EC22157026C00F9442C /* Vehicle.m in Sources */,
+				CD1D19332154C10E000CB578 /* main.m in Sources */,
+				CD1D19252154C10C000CB578 /* AppDelegate.m in Sources */,
+				CD978EBE2157026C00F9442C /* Plotting.m in Sources */,
+				CD978EBD2157026C00F9442C /* Aerodynamics.m in Sources */,
+				CD3C3DB821745F5D00D2BFBF /* AnalysisInput.m in Sources */,
+				CD978EC02157026C00F9442C /* Physics.m in Sources */,
+				CDC3C7E1215DE09400785C4B /* analysisInputsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D19352154C10E000CB578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1D193E2154C10E000CB578 /* TrevizTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D19402154C10E000CB578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1D19492154C10E000CB578 /* TrevizUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD1D193B2154C10E000CB578 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD1D191F2154C10C000CB578 /* Treviz */;
+			targetProxy = CD1D193A2154C10E000CB578 /* PBXContainerItemProxy */;
+		};
+		CD1D19462154C10E000CB578 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD1D191F2154C10C000CB578 /* Treviz */;
+			targetProxy = CD1D19452154C10E000CB578 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD1D192E2154C10E000CB578 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD1D192F2154C10E000CB578 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD1D194B2154C10E000CB578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CD1D194C2154C10E000CB578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CD1D194E2154C10E000CB578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Treviz/Treviz.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Treviz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanderson.Treviz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD1D194F2154C10E000CB578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Treviz/Treviz.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Treviz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanderson.Treviz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CD1D19512154C10E000CB578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TrevizTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanderson.TrevizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Treviz.app/Contents/MacOS/Treviz";
+			};
+			name = Debug;
+		};
+		CD1D19522154C10E000CB578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TrevizTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanderson.TrevizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Treviz.app/Contents/MacOS/Treviz";
+			};
+			name = Release;
+		};
+		CD1D19542154C10E000CB578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TrevizUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanderson.TrevizUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Treviz;
+			};
+			name = Debug;
+		};
+		CD1D19552154C10E000CB578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TrevizUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tanderson.TrevizUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Treviz;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD1D191B2154C10C000CB578 /* Build configuration list for PBXProject "Treviz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1D194B2154C10E000CB578 /* Debug */,
+				CD1D194C2154C10E000CB578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD1D194D2154C10E000CB578 /* Build configuration list for PBXNativeTarget "Treviz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1D194E2154C10E000CB578 /* Debug */,
+				CD1D194F2154C10E000CB578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD1D19502154C10E000CB578 /* Build configuration list for PBXNativeTarget "TrevizTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1D19512154C10E000CB578 /* Debug */,
+				CD1D19522154C10E000CB578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD1D19532154C10E000CB578 /* Build configuration list for PBXNativeTarget "TrevizUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1D19542154C10E000CB578 /* Debug */,
+				CD1D19552154C10E000CB578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD1D19182154C10C000CB578 /* Project object */;
+}
