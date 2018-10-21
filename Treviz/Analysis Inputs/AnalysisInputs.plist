@@ -136,7 +136,7 @@
 				<key>Units</key>
 				<string></string>
 				<key>isParam</key>
-				<true/>
+				<false/>
 				<key>itemType</key>
 				<string>subHeader</string>
 				<key>valueType</key>
@@ -967,7 +967,7 @@
 						<key>Units</key>
 						<string>distance</string>
 						<key>isParam</key>
-						<false/>
+						<true/>
 						<key>itemType</key>
 						<string>variable</string>
 						<key>valueType</key>

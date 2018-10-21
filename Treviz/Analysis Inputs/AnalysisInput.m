@@ -15,7 +15,8 @@ static NSMutableArray<AnalysisInput*>* allParams;
 +(void) initialize
 {
     if (!allParams){
-        allParams = [[NSMutableArray alloc] init];}
+        [AnalysisInput resetAllParams];
+    }
 }
 
 + (void)addParam:(AnalysisInput*) input{
@@ -24,6 +25,9 @@ static NSMutableArray<AnalysisInput*>* allParams;
 
 + (NSMutableArray<AnalysisInput*>*) getAllParams{
     return allParams;
+}
++ (void) resetAllParams{
+    allParams = [[NSMutableArray alloc] init];
 }
 
 

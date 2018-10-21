@@ -10,11 +10,12 @@
 #import "AnalysisInput.h"
 
 @implementation analysisInputsViewController
-- (void)awakeFromNib{
-//    [super awakeFromNib];
+- (void)awakeFromNib{//fixit: figure out why this is loading multiple times
+    [super awakeFromNib];
     //[super awakeFromNib];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"AnalysisInputs" ofType:@"plist"];
-    if (filePath && [self.inputs count]==0) {
+    if (filePath) {
+        [AnalysisInput resetAllParams];
         self.inputs = [AnalysisInput inputList:filePath];
         self.allParams = [AnalysisInput getAllParams];
     }
@@ -85,7 +86,7 @@
                 paramButton.state = curItem.isParam ? NSOnState : NSOffState;
             }
             else if ([curItem.itemType isEqualToString:@"header"] || [curItem.itemType isEqualToString:@"subHeader"]){
-                paramButton.state = [curItem hasParams] ? NSMixedState : NSOffState;
+                paramButton.state = [curItem hasParams] ? NSOnState : NSOffState;
             }
             //view.textField.stringValue = @"";
             /*
@@ -134,16 +135,16 @@
 #pragma mark - NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView{
-    return _allParams ? [_allParams count] : 0;
+    return _allParams ? [_allParams count] + 1: 0;
 }
 
 #pragma mark - NSTableViewDelegate
 
 - (id)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row{
     
-    if (row == [_allParams count] + 1 &&
-        [tableColumn.identifier isEqualToString:@"AddRemoveColumn"]){
-        NSTableCellView* view = (NSTableCellView *)[tableView makeViewWithIdentifier:@"AddParamCellView" owner:self];
+    if (row == [_allParams count]){
+        NSTableCellView* view;
+        view = [tableColumn.identifier isEqualToString:@"AddRemoveColumn"] ? (NSTableCellView *)[tableView makeViewWithIdentifier:@"AddParamCellView" owner:self] : nil;
         return view;
     }
     
@@ -176,11 +177,11 @@
             textField.stringValue = curItem.units;
             [textField sizeToFit];
         }
-    else if ([tableColumn.identifier isEqualToString:@"AddRemoveColumn"]) {
-        view = (NSTableCellView *)[tableView makeViewWithIdentifier:@"RemoveParamCellView" owner:self];
-        }
-            
     }
+    else if ([tableColumn.identifier isEqualToString:@"AddRemoveColumn"]){
+        view = (NSTableCellView *)[tableView makeViewWithIdentifier:@"RemoveParamCellView" owner:self];
+    }
+    
     
     return view;
 }
