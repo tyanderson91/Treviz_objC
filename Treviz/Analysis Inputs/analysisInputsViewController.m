@@ -32,6 +32,12 @@
 
 #pragma mark - NSOutlineViewDelegate
 
+- (IBAction)setParam:(id)sender {
+    NSInteger curRow;
+    curRow = [_outlineView rowForView:sender];
+    NSLog(@"Name: %u",(int)curRow);
+}
+
 - (NSView *)outlineView:(NSOutlineView *)outlineView viewForTableColumn:(NSTableColumn *)tableColumn item:(id)item{
     NSTableCellView *view;
     if ([item isKindOfClass:[AnalysisInput class]]){
@@ -83,10 +89,10 @@
             NSButton* paramButton = (NSButton*)view;
             
             if ([curItem.itemType isEqualToString:@"variable"]){
-                paramButton.state = curItem.isParam ? NSOnState : NSOffState;
+                paramButton.state = curItem.isParam ? NSControlStateValueOn : NSControlStateValueOff;
             }
             else if ([curItem.itemType isEqualToString:@"header"] || [curItem.itemType isEqualToString:@"subHeader"]){
-                paramButton.state = [curItem hasParams] ? NSOnState : NSOffState;
+                paramButton.state = [curItem hasParams] ? NSControlStateValueOn : NSControlStateValueOff;
             }
             //view.textField.stringValue = @"";
             /*

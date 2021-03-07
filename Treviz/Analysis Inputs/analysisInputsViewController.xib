@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -65,7 +65,7 @@
                                                     </imageView>
                                                     <textField identifier="HeaderCell" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFF-as-fdz">
                                                         <rect key="frame" x="23" y="0.0" width="222" height="17"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Ci7-xF-UJ7">
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" title="Table View Cell" id="Ci7-xF-UJ7">
                                                             <font key="font" metaFont="systemBold" size="15"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -91,7 +91,7 @@
                                                 <subviews>
                                                     <textField identifier="NameCell" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-Ai-H3j">
                                                         <rect key="frame" x="0.0" y="0.0" width="245" height="17"/>
-                                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="Blp-Zf-b9t">
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="Blp-Zf-b9t">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -113,7 +113,7 @@
                                                 <subviews>
                                                     <textField identifier="SubHeaderCell" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6G9-5Y-Fvh">
                                                         <rect key="frame" x="0.0" y="0.0" width="245" height="18"/>
-                                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="LKf-r7-gbC">
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="LKf-r7-gbC">
                                                             <font key="font" metaFont="systemSemibold" size="14"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -168,7 +168,7 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
-                                    <tableColumn identifier="UnitsColumn" width="148" minWidth="40" maxWidth="200" id="c1S-mV-GuT" userLabel="UnitsColumn">
+                                    <tableColumn identifier="UnitsColumn" editable="NO" width="148" minWidth="40" maxWidth="200" id="c1S-mV-GuT" userLabel="UnitsColumn">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Units">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -219,11 +219,14 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <button identifier="paramCheckBoxView" verticalHuggingPriority="750" id="rWY-9y-o0R">
-                                                <rect key="frame" x="582" y="1" width="50" height="18"/>
+                                                <rect key="frame" x="582" y="1" width="40" height="18"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="only" alignment="center" identifier="paramCheckBox" inset="2" id="ops-kS-SJB">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
+                                                    <connections>
+                                                        <action selector="setParam:" target="9rl-0V-Cmm" id="8sg-xL-0e3"/>
+                                                    </connections>
                                                 </buttonCell>
                                             </button>
                                         </prototypeCellViews>

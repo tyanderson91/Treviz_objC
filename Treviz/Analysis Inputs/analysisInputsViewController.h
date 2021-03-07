@@ -16,6 +16,7 @@
 
 @property (nonatomic, strong) NSMutableArray <AnalysisInput*> *inputs;
 @property (nonatomic, strong) NSMutableArray <AnalysisInput*>* allParams;
+- (IBAction)setParam:(id)sender;
 
 
 @end

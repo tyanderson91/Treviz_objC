@@ -23,6 +23,10 @@ static NSMutableArray<AnalysisInput*>* allParams;
     [allParams addObject:input];
 }
 
++ (void)removeParams:(AnalysisInput*) input{
+    [allParams removeObject:input];
+    input.isParam = NO;
+}
 + (NSMutableArray<AnalysisInput*>*) getAllParams{
     return allParams;
 }
